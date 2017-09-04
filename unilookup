@@ -52,7 +52,7 @@ def main():
             line = data.readline()
 
         tableData = [
-            [ 'character', 'byte', 'UTF-32', 'glyph', 'name' ]
+            [ 'character', 'byte', 'UTF-32', 'name', 'glyph' ]
         ]
 
         byte = 0
@@ -84,7 +84,7 @@ def main():
             utf32 = hex(num)[2:].upper().zfill(6)
             glyph = unichr(num)
 
-            tableData.append([ str(i), str(byte), utf32, glyph, name ])
+            tableData.append([ str(i), str(byte), utf32, name, glyph ])
 
             byte += byteLength
 
