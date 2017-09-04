@@ -68,7 +68,19 @@ def main():
                 if name == "<control>":
                     name = info[10]
 
-            byteLength = int(math.ceil(math.log(num, 2) / 8))
+            #byteLength = int(math.ceil(math.log(num, 2) / 8))
+            
+            # https://en.wikipedia.org/wiki/UTF-8#Description
+            if num >= 0x10000:
+                byteLength = 4
+            elif num >= 0x800:
+                byteLength = 3
+            elif num >= 0x80:
+                byteLength = 2
+            else:
+                byteLength = 1
+
+
             utf32 = hex(num)[2:].upper().zfill(6)
             glyph = unichr(num)
 
