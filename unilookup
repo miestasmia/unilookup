@@ -21,7 +21,7 @@ import codecs
 from terminaltables import AsciiTable
 import math
 
-dir = os.path.dirname(__file__)
+dir = os.path.dirname(os.path.realpath(__file__))
 
 UTF8Reader = codecs.getreader('utf8')
 sys.stdin = UTF8Reader(sys.stdin)
