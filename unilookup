@@ -67,8 +67,6 @@ def main():
                 name = info[1]
                 if name == "<control>":
                     name = info[10]
-
-            #byteLength = int(math.ceil(math.log(num, 2) / 8))
             
             # https://en.wikipedia.org/wiki/UTF-8#Description
             if num >= 0x10000:
