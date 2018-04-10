@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
 
-# (C) Mia Nordentoft 2016
+# (C) Mia Nordentoft 2016-2018
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -61,7 +61,7 @@ def main():
 
             if info is None:
                 num = int(chars[i], 16)
-                name = "CHARACTER NOT IN UNICODE 8.0.0"
+                name = "CHARACTER NOT IN UNICODE 10.0.0"
             else:
                 num = int(info[0], 16)
                 name = info[1]
